@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Constructor">
+<div class="slds-var-m-around_medium">
+<template if:true={childVisible}>
+
+    <lightning-button 
+    
+    label="Remove Child" 
+    title="Remove Child"
+    onclick={showData}  
+    class="slds-var-m-left_x-small"></lightning-button>
+</template>
+    <template if:false={childVisible}>
+        <lightning-button 
+        label="Show Child"
+        title="Show Child"
+        onclick={showData}  
+        class="slds-var-m-left_x-small"></lightning-button>
+    
+    </template>
+    
+
+
+
+    
+    <template if:true={childVisible}>
+
+
+        <c-life-Cycle-Child></c-life-Cycle-Child>  
+
+    </template>
+
+    </div>    
+     
+</lightning-card>
+</template>

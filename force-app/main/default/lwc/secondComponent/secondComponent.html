@@ -1,0 +1,28 @@
+<template>
+<lightning-card title="Show Data">
+    <lightning-button variant="brand-outline" 
+    label="Show Data" 
+    title="show data" 
+    onclick={handleVisibility} 
+    class="slds-m-around_small"></lightning-button>
+
+    <template if:true={isVisible}>
+        <div>The Data is showing now</div>
+
+        </template>
+    <template if:false={isVisible}>
+    <div>You can't see the data please click on the button </div>
+    </template>
+
+
+
+    <lightning-input 
+    type="text"
+    label="Please enter the valid username"
+    onkeyup={user}></lightning-input>
+ <template if:true={userName}>
+    
+    <div style="color:green;">This username is valid</div>
+ </template>
+</lightning-card>
+</template>
